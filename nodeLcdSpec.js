@@ -29,7 +29,7 @@ describe('unit test',function() {
         });
 
         it('show lcdDigitsString',function(){
-            var lcdDigitText = testNodeLcdDigits.biuldLcdString([9,1,0],allDigitsString);
+            var lcdDigitText = testNodeLcdDigits.buildLcdString([9,1,0],allDigitsString);
             var expectText = [['._.','|_|','..|'],['...','..|','..|'],['._.','|.|','|_|']];
 
             expect(lcdDigitText).toEqual(expectText);

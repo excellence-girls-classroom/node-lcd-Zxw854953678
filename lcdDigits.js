@@ -26,7 +26,7 @@ function loadAllDigits(){
 
 }
 
-function biuldLcdString(digitsArray,allDigitsString){
+function buildLcdString(digitsArray,allDigitsString){
     var digitsText = [];
 
     digitsArray.forEach(function(digit){
@@ -65,7 +65,7 @@ function printDigit(digit){
 
     var digitsArray = buildDigits(digit);
     var allDigitsString = loadAllDigits();
-    var lcdStringArray = biuldLcdString(digitsArray,allDigitsString);
+    var lcdStringArray = buildLcdString(digitsArray,allDigitsString);
 
     var lcdDigits = printLcdDigits(lcdStringArray);
     console.log(lcdDigits);
@@ -75,8 +75,13 @@ module.exports =
 {
     loadAllDigits:loadAllDigits,
     buildDigits:buildDigits,
-    biuldLcdString:biuldLcdString,
+    buildLcdString:buildLcdString,
     lcdDigitReceipt:lcdDigitReceipt,
     printLcdDigits:printLcdDigits,
     printDigit:printDigit
 };
+
+/*
+* attention:函数名开头要小写,否则发生错误;
+* 这是WebStorn的特性(为了预防某些错误):在WebStorn中,开头字母大写默认是类,小写开头默认是函数,如果函数名大写开头会出现警告
+* */
