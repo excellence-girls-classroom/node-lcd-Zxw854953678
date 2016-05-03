@@ -1,4 +1,4 @@
-function buildDigits(digit){
+function buildDigits(digit){//分割数字,将一个数字分割成数字数组
     var digitStringArray = digit.toString().split('');
     var digitArray = [];
 
@@ -26,7 +26,7 @@ function loadAllDigits(){
 
 }
 
-function buildLcdString(digitsArray,allDigitsString){
+function buildLcdString(digitsArray,allDigitsString){//将数字数组的每一个元素匹配一个LCD数字
     var digitsText = [];
 
     digitsArray.forEach(function(digit){
@@ -36,7 +36,7 @@ function buildLcdString(digitsArray,allDigitsString){
     return digitsText;
 }
 
-function printLcdDigits(lcdStringArray){
+function printLcdDigits(lcdStringArray){//连接LCD数字,返回一个字符串
     var lcdDigits = '';
     for(var i=0; i<3; i++){
         lcdDigits += lcdDigitReceipt(lcdStringArray,i);
@@ -45,7 +45,7 @@ function printLcdDigits(lcdStringArray){
     return lcdDigits;
 }
 
-function lcdDigitReceipt(lcdStringArray,index){
+function lcdDigitReceipt(lcdStringArray,index){//返回每行的字符串
     var digitReceipt = '';
 
     for(var j=0; j<lcdStringArray.length; j++){
@@ -60,8 +60,7 @@ function lcdDigitReceipt(lcdStringArray,index){
     return digitReceipt;
 }
 
-function printDigit(digit){
-    console.log("run begin...");
+function printDigit(digit){//打印字符串,字符串是LCD数字
 
     var digitsArray = buildDigits(digit);
     var allDigitsString = loadAllDigits();
