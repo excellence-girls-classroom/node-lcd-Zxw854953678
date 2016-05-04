@@ -1,12 +1,6 @@
 function buildDigits(digit){//分割数字,将一个数字分割成数字数组
-    var digitStringArray = digit.toString().split('');
-    var digitArray = [];
 
-    digitStringArray.forEach(function(digitString){
-        digitArray.push(Number(digitString));
-    });
-
-    return digitArray;
+    return digit.toString().split('');
 }
 
 function loadAllDigits(){
