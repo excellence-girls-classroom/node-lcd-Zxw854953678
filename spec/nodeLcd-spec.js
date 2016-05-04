@@ -1,4 +1,4 @@
-var testNodeLcdDigits = require('./main/lcdDigits.js');
+var testNodeLcdDigits = require('../main/lcdDigits.js');
 
 describe('unit test',function() {
 
