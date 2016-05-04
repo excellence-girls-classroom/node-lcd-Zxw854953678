@@ -1,4 +1,4 @@
-var testNodeLcdDigits = require('./lcdDigits.js');
+var testNodeLcdDigits = require('./main/lcdDigits.js');
 
 describe('unit test',function() {
 
@@ -6,7 +6,7 @@ describe('unit test',function() {
 
         it('split digit', function () {
             var digitArray = testNodeLcdDigits.buildDigits(910);
-            var expectText = [9, 1, 0];
+            var expectText = ['9', '1', '0'];
 
             expect(digitArray).toEqual(expectText);
         });
